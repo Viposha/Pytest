@@ -34,6 +34,17 @@ def test_to_dict():
 	assert pl2 == pl2_expected
 
 
+def test_player_from_dict():
+	pl1 = {
+		'last_name': 'Raul',
+		'position': 'forward',
+		'number': 15,
+	}
+	pl3 = Player('Raul', 'forward', 15)
+	pl2 = Player.from_dict(pl1)
+	assert pl3 == pl2
+
+
 def test_isinstance():
 	pl1 = Player('Raul', 'forward', 15)
 	assert isinstance(pl1, Player) == True
