@@ -1,5 +1,3 @@
-import pytest
-
 from main import randint
 
 def test_random():
